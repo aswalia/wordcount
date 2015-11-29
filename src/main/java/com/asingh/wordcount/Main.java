@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.util.List;
 
 public class Main {
-    
     public static void main(String[] args) {
         if (args.length != 1) {
             System.out.println("Usage: wordcount <textfilename>");
@@ -42,5 +41,4 @@ public class Main {
             System.out.println(p.getKey() + " (" + p.getValue() + ")");
         }
     }
-    
 }

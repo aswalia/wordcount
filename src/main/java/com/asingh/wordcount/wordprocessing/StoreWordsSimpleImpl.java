@@ -43,7 +43,7 @@ public class StoreWordsSimpleImpl implements StoreWords {
         if (value == null) {
             value = 0;
         }
-        Pair p = new Pair(key,value);
+        Pair<String,Integer> p = new Pair(key,value);
         return p;
     }
 
@@ -55,7 +55,7 @@ public class StoreWordsSimpleImpl implements StoreWords {
         List<Pair<String,Integer>> result = new ArrayList<>();
         Set<String> keys = wordStorage.keySet();
         for (String key:keys) {
-            result.add((Pair)get(key));
+            result.add((Pair<String,Integer>)get(key));
         }
         return result;
     }

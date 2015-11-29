@@ -14,7 +14,7 @@ import java.util.List;
 public class ProcessTextFile {
     private String path = "";
     private List<String> lineAsString = null;
-    
+
     public ProcessTextFile(String filename) throws IOException {
         path = new File(filename).getAbsolutePath();
         if (path.equals("")) {
@@ -29,7 +29,7 @@ public class ProcessTextFile {
             }
         }
     }
-    
+
     public List<String> getLinesFromTextFile() {
         return lineAsString;
     }
