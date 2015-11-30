@@ -13,11 +13,12 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        if (args.length != 1) {
-            System.out.println("Usage: wordcount <textfilename>");
+        if (args.length != 2) {
+            System.out.println("Usage: wordcount <textfilename> <n>");
             System.exit(-1);
         }
         String filename = args[0];
+        Integer rank = Integer.parseInt(args[1]);
         ProcessTextFile processFile = null;
         try {
             processFile = new ProcessTextFile(filename);
@@ -36,7 +37,7 @@ public class Main {
             store.store(wordList);
         }
         Ranking ranking = new RankWords(store);
-        List<Pair<String,Integer>> result = ranking.top(10);
+        List<Pair<String,Integer>> result = ranking.top(rank);
         for (Pair p:result) {
             System.out.println(p.getKey() + " (" + p.getValue() + ")");
         }
