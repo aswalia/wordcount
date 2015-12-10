@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id="processFile" class="com.asingh.wordcount.fileprocessing.ProcessTextFile">
+   </bean>
+   <bean id="processLine" class="com.asingh.wordcount.lineprocessing.ProcessLineFromTextFile">
+   </bean>
+   <bean id="store" class="com.asingh.wordcount.wordprocessing.StoreWordsSimpleImpl">
+   </bean>
+   <bean id="convertLine" class="com.asingh.wordcount.wordprocessing.ProcessWordsFromLine">
+   </bean>
+   <bean id="ranking" class="com.asingh.wordcount.reporting.RankWords">
+   </bean>
+</beans>

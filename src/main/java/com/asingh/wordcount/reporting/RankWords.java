@@ -16,7 +16,8 @@ public class RankWords implements Ranking {
     private StoreWords store = null;
     private List<Pair<String,Integer>> sortedList = null;
     
-    public RankWords(StoreWords s) {
+    @Override
+    public void setStoreWords(StoreWords s) {
         store = s;
         if (store != null) {
             sort();

@@ -1,6 +1,7 @@
 package com.asingh.wordcount.reporting;
 
 import com.asingh.wordcount.wordprocessing.Pair;
+import com.asingh.wordcount.wordprocessing.StoreWords;
 import java.util.List;
 
 /**
@@ -14,5 +15,6 @@ public interface Ranking {
     public List<Pair<String,Integer>> bottom(int rank);
     // return the ranking of the word
     public int get(String word);
-    
+    // set the store 
+    public void setStoreWords(StoreWords s);
 }

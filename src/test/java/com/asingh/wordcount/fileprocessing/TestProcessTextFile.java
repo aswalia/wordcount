@@ -45,6 +45,7 @@ public class TestProcessTextFile {
     }
 
     private void prepareSetup(String filename) throws IOException {
-        ProcessTextFile processFile = new ProcessTextFile(filename);
+        ProcessTextFile processFile = new ProcessTextFile();
+        processFile.setFileName(filename);
     }
 }
