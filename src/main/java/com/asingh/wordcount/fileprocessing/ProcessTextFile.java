@@ -17,7 +17,7 @@ public class ProcessTextFile {
     private List<String> lineAsString = null;
     private String fileName = null;
 
-    public void setFileName(String filename) throws IOException {
+    public void readTextFile(String filename) throws IOException {
         path = new File(filename).getAbsolutePath();
         lineAsString = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {

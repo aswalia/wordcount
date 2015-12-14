@@ -23,7 +23,7 @@ public class Main {
         Integer rank = Integer.parseInt(args[1]);
         ProcessTextFile processFile = (ProcessTextFile) context.getBean("processFile");
         try {
-            processFile.setFileName(filename);
+            processFile.readTextFile(filename);
         } catch (IOException ex) {
             System.out.println("File processing error:" + ex.getLocalizedMessage());
             System.exit(-1);

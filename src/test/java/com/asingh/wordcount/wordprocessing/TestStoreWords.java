@@ -28,7 +28,7 @@ public class TestStoreWords {
     @Before
     public void setUp() {
         splitLine = new ProcessLineFromTextFile();
-        convertWords = new ProcessWordsFromLine();
+        convertWords = new ProcessWordsFromLine(new ProcessWordSimpleImpl());
         storeWords = new StoreWordsSimpleImpl();
     }
     

@@ -25,7 +25,7 @@ public class TestProcessWordsFromLine {
     
     @Before
     public void setUp() {
-        processWordList = new ProcessWordsFromLine();
+        processWordList = new ProcessWordsFromLine(new ProcessWordSimpleImpl());
     }
     
     @After

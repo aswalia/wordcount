@@ -10,8 +10,8 @@ import java.util.List;
 public class ProcessWordsFromLine {
     ProcessWord processWord = null;
     
-    public ProcessWordsFromLine() {
-        processWord = new ProcessWordSimpleImpl();
+    public ProcessWordsFromLine(ProcessWord processor) {
+        processWord = processor;
     }
     
     public void processWordList(List<String> wordList) {
